@@ -67,14 +67,33 @@
            
         </style>
         <script src="jquery.js" type=text/javascript></script> 
-         <script src="meuscript.js" type=text/javascript></script>
-       <!---nyroModal  --->
-
-       <link href="nyroModal.css" media="screen" rel="stylesheet"/>
-        <script src="jquery.nyroModal.custom.js"  type=text/javascript></script>
-       <script src="jquery.mousewheel.js" type=text/javascript></script>
-        <script src="jquery.color.js" type=text/javascript></script>
-     
+        <script src="meuscript.js" type=text/javascript></script>
+       <!---fancybox  --->
+       <script src="fancybox.js"  type=text/javascript></script>
+       <link href="fancybox.css" media="screen" rel="stylesheet"/>
+      <script src="fancybox-media.js"  type=text/javascript></script>
+     <script type=text/javascript>
+         $(document).ready(function(){
+            $('.fancybox').fancybox();
+             var fbWidth=800;
+             var fbHeight=450;
+             
+             $('.fancybox-media')
+             .attr('rel', 'media-gallery')
+             .fancybox({
+                 arrows: true,
+                 'maxWidth':fbWidth,
+                 'maxHeight': fbHeight,
+                 'width': fbWidth,
+                 'height': fbHeight,
+                 helpers:{
+                     media: {},
+                     buttons:{}
+                 }
+             });         
+         
+         });
+        </script>
    
     </head>
     <html>
