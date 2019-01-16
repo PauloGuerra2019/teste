@@ -28,7 +28,7 @@ $(document).ready(function(){
               titulo = item.snippet.title; 
               descricao = item.snippet.publishedAt;
               videoId =item.snippet.resourceId.videoId;   
-              arquivo = '<li class="principal"><a class="fancybox" href="http://www.youtube.com/watch?v='+videoId+'"><div class="foto"><img src ="' + imagem + '"/><div class="legenda"><h5>'+ titulo +'</h5><p>'+ descricao +'</p></div></div></a></li>';
+              arquivo = '<li class="principal"><a class="fancybox-media" href="http://www.youtube.com/watch?v='+videoId+'"><div class="foto"><img src ="' + imagem + '"/><div class="legenda"><h5>'+ titulo +'</h5><p>'+ descricao +'</p></div></div></a></li>';
                $('div#janela ul').append(arquivo);
            });
         }
